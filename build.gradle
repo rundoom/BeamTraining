@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.training'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.beam:beam-sdks-java-core:2.40.0'
+    implementation 'org.apache.beam:beam-runners-direct-java:2.40.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
